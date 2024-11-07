@@ -1,5 +1,4 @@
 <?php
-// controller/AnuidadeController.php
 
 require_once 'model/Anuidade.php';
 

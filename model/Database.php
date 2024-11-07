@@ -1,5 +1,4 @@
 <?php
-// model/Database.php
 
 class Database {
     private static $connection = null;

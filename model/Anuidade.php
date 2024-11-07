@@ -1,5 +1,4 @@
 <?php
-// model/Anuidade.php
 
 require_once 'Database.php';
 
@@ -19,14 +18,12 @@ class Anuidade {
         return $stmt->execute();
     }
 
-    // Método para listar todas as anuidades
     public function listarTodas() {
         $sql = "SELECT * FROM anuidades ORDER BY ano DESC";
         $stmt = $this->db->query($sql);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    // Método para buscar uma anuidade por ID
     public function buscarPorId($id) {
         $sql = "SELECT * FROM anuidades WHERE id = :id";
         $stmt = $this->db->prepare($sql);
@@ -35,7 +32,6 @@ class Anuidade {
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    // Método para atualizar o valor de uma anuidade específica
     public function atualizarValor($id, $valor) {
         $sql = "UPDATE anuidades SET valor = :valor WHERE id = :id";
         $stmt = $this->db->prepare($sql);
@@ -44,7 +40,6 @@ class Anuidade {
         return $stmt->execute();
     }
 
-    // Método para excluir uma anuidade
     public function excluir($id) {
         $sql = "DELETE FROM anuidades WHERE id = :id";
         $stmt = $this->db->prepare($sql);
