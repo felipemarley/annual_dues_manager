@@ -10,10 +10,10 @@
     <h1>Bem-vindo ao Gerenciamento de Associados - Devs do RN</h1>
     <nav>
         <ul>
-            <li><a href="associados.html">Associados</a></li>
-            <li><a href="anuidade.html">Anuidades</a></li>
-            <li><a href="cobranca.html">Cobrança</a></li>
-            <li><a href="pagamento.html">Pagamentos</a></li>
+            <li><a href="associados.php">Associados</a></li>
+            <li><a href="anuidade.php">Anuidades</a></li>
+            <li><a href="cobranca.php">Cobrança</a></li>
+            <li><a href="pagamento.php">Pagamentos</a></li>
         </ul>
     </nav>
 </body>

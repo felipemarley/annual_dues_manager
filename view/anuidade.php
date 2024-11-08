@@ -12,7 +12,7 @@
     <!-- Formulário para adicionar nova anuidade -->
     <section>
         <h2>Adicionar Anuidade</h2>
-        <form action="php/add_anuidade.php" method="post">
+        <form action="scripts/add_anuidade.php" method="post">
             <label for="ano">Ano:</label>
             <input type="number" id="ano" name="ano" required>
 

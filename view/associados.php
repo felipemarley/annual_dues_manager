@@ -12,7 +12,7 @@
     <!-- Formulário para adicionar novo associado -->
     <section>
         <h2>Adicionar Associado</h2>
-        <form action="php/add_associado.php" method="post">
+        <form action="scripts/add_associado.php" method="post">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
 
