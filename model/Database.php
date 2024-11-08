@@ -11,7 +11,6 @@ class Database {
                 $username = 'postgres';
                 $password = '1234';
 
-                // Conecte-se ao banco principal para verificação e criação do banco
                 self::$connection = new PDO("pgsql:host=$host;port=$port;dbname=postgres", $username, $password);
                 self::$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
