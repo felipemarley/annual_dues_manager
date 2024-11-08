@@ -1,5 +1,5 @@
 <?php
-require_once 'model/Database.php';
+require_once 'Database.php';
 
 Database::getConnection();
 ?>
