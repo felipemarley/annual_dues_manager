@@ -12,7 +12,6 @@
         <ul>
             <li><a href="associados.php">Associados</a></li>
             <li><a href="anuidade.php">Anuidades</a></li>
-            <li><a href="cobranca.php">Cobrança</a></li>
             <li><a href="pagamento.php">Pagamentos</a></li>
         </ul>
     </nav>
