@@ -7,9 +7,10 @@ CREATE TABLE associados (
 );
 
 CREATE TABLE anuidades (
-    id SERIAL PRIMARY KEY,
+    associado_id SERIAL PRIMARY KEY,
     ano CHAR(4) NOT NULL,
     valor DECIMAL(10, 2) NOT NULL
+    FOREIGN KEY (associado_id) REFERENCES associados(id)
 );
 
 CREATE TABLE pagamentos (

@@ -10,7 +10,7 @@
     <h1>Registro de Pagamento de Anuidades</h1>
 
     <div id="pagamentoList">
-        <?php include 'php/gerenciar_pagamento.php'; ?>
+        <?php include '../controller/gerenciar_pagamento.php'; ?>
     </div>
 </body>
 </html>

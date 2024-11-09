@@ -10,7 +10,7 @@
     <h1>Cobrança de Anuidades</h1>
 
     <div id="cobrancaList">
-        <?php include 'php/calcula_cobranca.php'; ?>
+        <?php include '../controller/calcula_cobranca.php'; ?>
     </div>
 </body>
 </html>

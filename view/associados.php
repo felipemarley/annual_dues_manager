@@ -12,7 +12,7 @@
     <!-- Formulário para adicionar novo associado -->
     <section>
         <h2>Adicionar Associado</h2>
-        <form action="scripts/add_associado.php" method="post">
+        <form action="../controller/add_associado.php" method="post">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
 
@@ -34,7 +34,7 @@
         <h2>Lista de Associados</h2>
         <div id="associadosList">
             <!-- Aqui faremos uma chamada PHP para listar associados -->
-            <?php include 'php/lista_associados.php'; ?>
+            <?php include '../controller/lista_associados.php'; ?>
         </div>
     </section>
 </body>

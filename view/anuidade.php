@@ -2,33 +2,34 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anuidades - Devs do RN</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Cadastrar Anuidade</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <h1>Gerenciamento de Anuidades</h1>
+    <h2>Cadastrar Anuidade</h2>
+    <form action="../controller/add_anuidade.php" method="POST">
+        <label for="associado">Associado:</label>
+        <select name="associado_id" id="associado" required>
+            <?php
+            // Inclui a conexão com o banco
+            require_once '../model/Database.php';
+            $db = Database::getConnection();
 
-    <!-- Formulário para adicionar nova anuidade -->
-    <section>
-        <h2>Adicionar Anuidade</h2>
-        <form action="scripts/add_anuidade.php" method="post">
-            <label for="ano">Ano:</label>
-            <input type="number" id="ano" name="ano" required>
+            // Consulta os associados cadastrados
+            $query = $db->query("SELECT id, nome FROM associados");
+            while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+                echo "<option value='{$row['id']}'>{$row['nome']}</option>";
+            }
+            ?>
+        </select>
 
-            <label for="valor">Valor (R$):</label>
-            <input type="text" id="valor" name="valor" required>
+        <label for="ano">Ano:</label>
+        <input type="number" name="ano" id="ano" required min="1900" max="2100">
 
-            <button type="submit">Cadastrar Anuidade</button>
-        </form>
-    </section>
+        <label for="valor">Valor (R$):</label>
+        <input type="number" name="valor" id="valor" required step="0.01">
 
-    <!-- Lista de anuidades existentes -->
-    <section>
-        <h2>Anuidades Existentes</h2>
-        <div id="anuidadesList">
-            <?php include 'php/lista_anuidades.php'; ?>
-        </div>
-    </section>
+        <button type="submit">Cadastrar Anuidade</button>
+    </form>
 </body>
 </html>
