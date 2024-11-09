@@ -20,8 +20,6 @@ class Database {
                 // Conecte-se ao banco de dados específico
                 self::$connection = new PDO("pgsql:host=$host;port=$port;dbname=$dbname", $username, $password);
                 self::$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-                echo "Conexão bem-sucedida!";
             } catch (PDOException $e) {
                 echo "Erro de conexão: " . $e->getMessage();
             }
