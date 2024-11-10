@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerenciar Anuidades - Devs do RN</title>
+    <title>Menu - Anuidade</title>
     <link rel="stylesheet" href="css/styles.css">
     <script>
         // Função para alternar entre as seções de conteúdo
@@ -15,17 +15,19 @@
 
             // Mostra apenas a seção escolhida
             document.getElementById(sectionId).style.display = 'block';
+
+            // Reinicia a seleção de associado ao trocar de seção
+            let selects = document.querySelectorAll("select[name='associado_id']");
+            selects.forEach(select => select.selectedIndex = 0);
         }
     </script>
 </head>
 <body>
     <h2>Gerenciar Anuidades</h2>
     <nav>
-        <ul>
-            <li><a href="#" onclick="showSection('calcularAnuidade'); return false;">Calcular Anuidades</a></li>
-            <li><a href="#" onclick="showSection('listarAnuidade'); return false;">Listar Anuidades</a></li>
-            <li><a href="#" onclick="showSection('atualizarAnuidade'); return false;">Ajustar Anuidade</a></li>
-        </ul>
+        <button onclick="showSection('calcularAnuidade')">Calcular Anuidades</button>
+        <button onclick="showSection('listarAnuidade')">Listar Anuidades</button>
+        <button onclick="showSection('atualizarAnuidade')">Ajustar Anuidade</button>
     </nav>
 
     <section>
@@ -35,6 +37,7 @@
             <form action="../controller/calcular_anuidade.php" method="POST">
                 <label for="associado">Associado:</label>
                 <select name="associado_id" id="associado" required>
+                    <option value="" disabled selected>Selecione um Associado</option>
                     <?php
                     require_once '../model/Database.php';
                     $db = Database::getConnection();
@@ -54,6 +57,7 @@
             <form method="POST" action="">
                 <label for="associado_id">Selecionar Associado:</label>
                 <select name="associado_id" id="associado_id" required>
+                    <option value="" disabled selected>Selecione um Associado</option>
                     <?php
                     $db = Database::getConnection();
                     $query = $db->query("SELECT id, nome FROM associados");
@@ -99,6 +103,7 @@
             <form action="../controller/atualizar_anuidade.php" method="POST">
                 <label for="associado">Selecionar Associado:</label>
                 <select name="associado_id" id="associado" required>
+                    <option value="" disabled selected>Selecione um Associado</option>
                     <?php
                     $db = Database::getConnection();
                     $query = $db->query("SELECT id, nome FROM associados");
