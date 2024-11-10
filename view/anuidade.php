@@ -23,7 +23,7 @@
     </script>
 </head>
 <body>
-    <h2>Gerenciar Anuidades</h2>
+    <h1>Gerenciamento de Anuidades</h1>
     <nav>
         <button onclick="showSection('calcularAnuidade')">Calcular Anuidades</button>
         <button onclick="showSection('listarAnuidade')">Listar Anuidades</button>
