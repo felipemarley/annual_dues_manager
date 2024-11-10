@@ -65,7 +65,7 @@
                         echo "<td>R$ {$anuidade['valor']}</td>";
                         echo "<td>" . ($anuidade['pago'] ? 'Pago' : 'Não Pago') . "</td>";
                         echo "<td>
-                                <form action='dar_baixa_pagamento.php' method='POST'>
+                                <form action='../controller/pagamento_unitario.php' method='POST'>
                                     <input type='hidden' name='anuidade_id' value='{$anuidade['id']}'>
                                     <button type='submit'>Dar Baixa</button>
                                 </form>
@@ -76,7 +76,7 @@
 
                     // Formulário para dar baixa total (pagar todas as anuidades)
                     echo "<h3>Pagar Todas as Anuidades</h3>";
-                    echo "<form action='dar_baixa_pagamento_total.php' method='POST'>
+                    echo "<form action='../controller/pagamento_total.php' method='POST'>
                             <input type='hidden' name='associado_id' value='{$associado_id}'>
                             <button type='submit'>Pagar Todas as Anuidades</button>
                           </form>";
