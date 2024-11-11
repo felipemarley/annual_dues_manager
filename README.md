@@ -17,15 +17,24 @@ O projeto é organizado da seguinte forma:
 
 - **controller/** - Controladores que lidam com a lógica das ações da aplicação;
 - **model/** - Classes modeladas para uso;
-- **view/** - Arquivos de visualização que compõem a interface (HTML e CSS);
+- **view/** - Arquivos de visualização que compõem a interface (HTML e CSS).
+
+## Funcionalidades
+
+O projeto permite que seja feito:
+
+- Cadastro de Associados;
+- Cálculo e Associação de anuídades para cada associado, com base em seu ano de filiação;
+- Alteração e Consulta às anuídades dos associados;
+- Pagamento individual ou total de anuidades.
 
 ## Pré-requisitos
 
 Antes de começar, você vai precisar instalar o seguinte:
 
-1. **XAMPP** - para rodar o Apache e o servidor PHP.
-2. **PostgreSQL** - com usuário `postgres`, senha `1234` e porta `5432`.
-3. **PgAdmin 4** - para gerenciar o banco de dados PostgreSQL.
+1. **XAMPP** - para rodar o Apache e o servidor PHP;
+2. **PostgreSQL** - com usuário `postgres`, senha `1234` e porta `5432`;.
+3. **PgAdmin 4** - para gerenciar o banco de dados PostgreSQL;
 4. **VS Code** - (opcional, mas recomendado) para edição do código.
 
 > **Nota:** As credenciais e a porta do PostgreSQL provavelmente precisarão estar configuradas conforme descritas acima para garantir o funcionamento correto do sistema.
@@ -35,4 +44,4 @@ Antes de começar, você vai precisar instalar o seguinte:
 1. Clone o Repositório;
 2. Aloque o Projeto da pasta htdocs do XAMPP;
 3. Certifique-se de rodar o banco de dados;
-4. Inicie o servidor no XAMPP;
+4. Inicie o servidor no XAMPP.
